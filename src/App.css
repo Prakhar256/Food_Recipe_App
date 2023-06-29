@@ -1,0 +1,200 @@
+body {
+  padding-top: 0.5vh;
+  background-image: linear-gradient(70deg, #282c53, #4c6faf);
+  color: #ffe5b4;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.card_user {
+  color: rgb(118, 116, 112);
+  height: 330px;
+  width: 210px;
+  margin: auto;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(133, 127, 127, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: 2s;
+  background-color: rgb(39, 26, 26);
+}
+
+.user_image {
+  filter: grayscale(40%);
+  height: 98%;
+  width: 98%;
+  margin-bottom: 1px;
+}
+
+.food_container_user {
+  padding: 10px;
+  width: 88%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  height: 83vh;
+  overflow-y: scroll;
+  row-gap: 15px;
+  justify-content: space-around;
+}
+
+.logo_image {
+  height: 40px;
+}
+
+.user_nav {
+  width: 88%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+}
+.input_user {
+  width: 60%;
+  padding: 4px 0px 4px 0px;
+  text-align: center;
+}
+.logo_container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+  align-items: center;
+  padding: 2px;
+}
+.logo_container > p {
+  font-weight: bold;
+  margin-top: 8px;
+}
+.offcanvas_user {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  /* height: 65vh; */
+  border-radius: 8px;
+  margin-top: 8vh;
+  margin-right: 90px;
+}
+
+.props_li {
+  width: 90%;
+  text-align: center;
+  padding: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  /* transition: 2s; */
+}
+.logo_container {
+  cursor: pointer;
+}
+
+.card_user:hover {
+  transition: 600ms;
+  transform: scale(1.05, 1.05);
+  opacity: 1;
+  background-color: black;
+  color: white;
+}
+.props_li:active {
+  color: blue;
+}
+
+.food_container_user::-webkit-scrollbar,
+.offcanvas_user::-webkit-scrollbar {
+  display: none;
+}
+.card-title {
+  text-align: center;
+}
+.userContent,
+.card-body {
+  padding: 1.5%;
+  font-weight: bold;
+  width: 98%;
+  margin: auto;
+  text-align: center;
+  transition: 3s;
+}
+.userContent > span:first-child:hover,
+.userContent > span:last-child:hover {
+  color: rgb(78, 233, 78);
+  text-decoration: underline;
+  transition: 1s;
+}
+
+.quiceSearchCard {
+  /* opacity: 0.6; */
+  display: grid;
+  background-position: center;
+  height: 230px;
+  width: 200px;
+  text-align: center;
+  align-items: center;
+
+  border-radius: 10px;
+}
+.quiceSearchCard p {
+  font-weight: bold;
+  font-size: 25px;
+  transition: 2s;
+  color: rgb(236, 57, 185);
+}
+
+.quiceSearchCard:hover p {
+  opacity: 1;
+  transition: 0.5s;
+  transform: scale(1.05, 1.05);
+}
+.quickSeacrchContainer {
+  margin: auto;
+  width: 68%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+@media only screen and (min-width: 500px) {
+  .quiceSearchCard p {
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .logo_container > p {
+    display: none;
+  }
+  .food_container_user {
+    height: 88vh;
+  }
+  .offcanvas_user {
+    background-color: #282c53;
+    color: rgb(245, 239, 239);
+    margin-right: 10px;
+    width: 60%;
+    /* height: 40vh; */
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .food_container_user {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  .quiceSearchCard:hover {
+    opacity: 0.8;
+  }
+  .quiceSearchCard p {
+    display: block;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .input_user {
+    width: 35%;
+    text-align: center;
+  }
+}
